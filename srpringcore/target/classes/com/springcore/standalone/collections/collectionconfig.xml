@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-util-3.0.xsd 
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd" >
+
+	
+	<util:list list-class="java.util.LinkedList" id="mybestfriends">
+		<value>Chandler</value>
+		<value>Monika</value>
+		<value>Joe</value>
+		<value>Phebee</value>
+		<value>Rachel</value>
+	</util:list>
+	
+	<util:map map-class="java.util.HashMap" id="fees">
+		<entry key="Python" value="200"/>
+		<entry key="Java" value="100"/>
+		<entry key="C/C++" value="50"/>
+	</util:map>
+	
+	<util:set set-class="java.util.HashSet" id="foo">
+		<value>Paneer</value>
+		<value>Gobhi</value>
+		<value>Parantha</value>
+	</util:set>
+	
+	<util:properties id="pro">
+		<prop key="URL">"com.mysql.jdbc.driver"</prop>
+		<prop key="User Name">root</prop><prop key="Password">root</prop>
+	</util:properties>
+	
+	<bean class ="com.springcore.standalone.collections.Person" name="per">
+		<property name="friends">
+			<ref bean="mybestfriends"/>
+		</property>
+		
+		<property name="feestucture">
+			<ref bean="fees"/>
+		</property>
+		
+		<property name="food">
+			<ref bean="foo" />
+		</property>
+		
+		<property name="properties">
+			<ref bean="pro" />
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>servletTest</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                width:30%;
+                border:3px solid black;
+                margin: auto;
+                padding: 20px;
+                font-size: 20px;
+            }
+            #myform table tr td{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="text-align: center">FORM</h1>
+            <form id="myform" action="ServletPro0" method="POST">
+                <table>
+                    <tr>
+                        <td>Enter your Username: </td>
+                        <td><input type="text" name="Username" placeholder="Enter here"></td>
+                    <tr>
+                        <td>Enter your Password: </td>
+                        <td><input type="password" name="Password" placeholder="Enter here"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter your Email: </td>
+                        <td><input type="email" name="Email" placeholder="Enter here"></td>
+                    </tr>
+                        <td>Choose your Gender: </td>
+                        <td><input type="radio" name="user_gender" value="Male">Male &nbsp; &nbsp;
+                            <input type="radio" name="user_gender" value="Female">Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Take the course: </td>
+                        <td>
+                            <select name="Course">
+                                <option value="JAVA">C/C++</option>
+                                <option value="JAVA">JAVA</option>
+                                <option value="JAVA">HTML/CSS</option>
+                                <option value="JAVA">JavaScript</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <input type="checkbox" value="checked" name="Condition">
+                        </td>
+                        <td>
+                            Agree T&C
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
